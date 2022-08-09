@@ -8,9 +8,18 @@
     <title>Document</title>
 </head>
 <body>
-<a href="{% url 'about_us' %}">
+<h1>
+    Log-In
+</h1>
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Log In">
+</form>
+
+<a href="{% url 'home' %}">
     <h1>
-        Home page
+        Home
     </h1>
 </a>
 
@@ -20,19 +29,5 @@
     </h1>
 </a>
 
-<a href="{% url 'signup' %}">
-    <h1>
-        Sign-up
-    </h1>
-</a>
-
-{% if user.is_authenticated %}
-Hi {{ user.username }}
-<a href="{% url 'logout' %}">
-    <h1>
-        Log-out
-    </h1>
-</a>
-{% endif %}
 </body>
 </html>
