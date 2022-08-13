@@ -1,38 +1,36 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-<a href="{% url 'about_us' %}">
-    <h1>
-        Home page
-    </h1>
-</a>
+{% extends '_base.html' %}
 
-<a href="{% url 'login' %}">
-    <h1>
+
+{%block page_title%}
+home
+{% endblock%}
+
+
+{% block content %}
+    <a href="{% url 'about_us' %}">
+        <h1>
+            Home page
+        </h1>
+    </a>
+
+    <a href="{% url 'login' %}">
+        <h1>
         Log-in
-    </h1>
-</a>
+        </h1>
+    </a>
 
-<a href="{% url 'signup' %}">
-    <h1>
-        Sign-up
-    </h1>
-</a>
+    <a href="{% url 'signup' %}">
+        <h1>
+            Sign-up
+        </h1>
+    </a>
 
-{% if user.is_authenticated %}
-Hi {{ user.username }}
-<a href="{% url 'logout' %}">
-    <h1>
-        Log-out
-    </h1>
-</a>
-{% endif %}
-</body>
-</html>
+    {% if user.is_authenticated %}
+        Hi {{ user.username }}
+        <a href="{% url 'logout' %}">
+            <h1>
+                Log-out
+            </h1>
+        </a>
+    {% endif %}
+{% endblock %}

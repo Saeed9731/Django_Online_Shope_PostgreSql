@@ -1,33 +1,30 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-<h1>
-    Log-In
-</h1>
-<form action="" method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Log In">
-</form>
+{% extends '_base.html' %}
+{% load crispy_forms_tags %}
 
-<a href="{% url 'home' %}">
+{% block page_title %}
+  Sign-Up
+{% endblock %}
+
+{% block content %}
     <h1>
-        Home
+        Sign-Up
     </h1>
-</a>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form|crispy }}<br>
+        <input class="btn btn-primary" type="submit" value="Log In">
+    </form>
 
-<a href="{% url 'login' %}">
-    <h1>
-        Log-in
-    </h1>
-</a>
+    <a href="{% url 'home' %}">
+        <h1>
+            Home
+        </h1>
+    </a>
 
-</body>
-</html>
+    <a href="{% url 'login' %}">
+        <h1>
+            Log-in
+        </h1>
+    </a>
+{% endblock %}
+
