@@ -13,24 +13,4 @@ home
         </h1>
     </a>
 
-    <a href="{% url 'login' %}">
-        <h1>
-        Log-in
-        </h1>
-    </a>
-
-    <a href="{% url 'signup' %}">
-        <h1>
-            Sign-up
-        </h1>
-    </a>
-
-    {% if user.is_authenticated %}
-        Hi {{ user.username }}
-        <a href="{% url 'logout' %}">
-            <h1>
-                Log-out
-            </h1>
-        </a>
-    {% endif %}
 {% endblock %}
