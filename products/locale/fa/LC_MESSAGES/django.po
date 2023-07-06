@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-06 17:55+0330\n"
+"POT-Creation-Date: 2023-07-06 19:49+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,7 +27,7 @@ msgstr "بد"
 
 #: .\models.py:33
 msgid "Normal"
-msgstr "نرمال"
+msgstr "متوسط"
 
 #: .\models.py:34
 msgid "Good"
@@ -168,3 +168,7 @@ msgstr "سبد خرید"
 #: .\templates\product\product_detail.html:280
 msgid "Product of 1"
 msgstr "محصول شماره یک"
+
+#: .\views.py:36
+msgid "Your comment has been successfully registered"
+msgstr "نظر شما با موفقیت ثبت شد"

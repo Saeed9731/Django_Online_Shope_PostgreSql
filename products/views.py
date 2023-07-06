@@ -1,5 +1,7 @@
 from django.views import generic
-from django.shortcuts import get_object_or_404, reverse
+from django.shortcuts import get_object_or_404
+from django.utils.translation import gettext_lazy as _
+from django.contrib import messages
 
 from .models import Product, Comment
 from .forms import CommentForm
@@ -31,5 +33,6 @@ class CommentCreateView(generic.CreateView):
         product_id = int(self.kwargs['product_id'])
         product = get_object_or_404(Product, id=product_id)
         obj.product = product
+        messages.success(self.request, _('Your comment has been successfully registered'))
 
         return super().form_valid(form)
