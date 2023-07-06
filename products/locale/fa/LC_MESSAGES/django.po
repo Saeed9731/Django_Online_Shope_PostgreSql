@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-06 10:42+0330\n"
+"POT-Creation-Date: 2023-07-06 17:55+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,18 +17,154 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
+#: .\models.py:31
+msgid "Very Bad"
+msgstr "خیلی بد"
+
+#: .\models.py:32
+msgid "Bad"
+msgstr "بد"
+
+#: .\models.py:33
+msgid "Normal"
+msgstr "نرمال"
+
+#: .\models.py:34
+msgid "Good"
+msgstr "خوب"
+
+#: .\models.py:35
+msgid "Perfect"
+msgstr "عالی"
+
+#: .\models.py:45
+msgid "Comment Text"
+msgstr "متن دیدگاه"
+
+#: .\models.py:46
+msgid "What are your score"
+msgstr "امتیاز بدهید"
+
+#: .\templates\product\product_detail.html:9
+msgid "Product detail"
+msgstr "توضیحات محصول"
+
+#: .\templates\product\product_detail.html:21
+msgid "Product detail of"
+msgstr " توضیحات محصول"
+
+#: .\templates\product\product_detail.html:46
+msgid "$"
+msgstr "تومان"
+
+#: .\templates\product\product_detail.html:48
+msgid "21$"
+msgstr "210,000"
+
 #: .\templates\product\product_detail.html:59
 msgid "Add to Cart"
-msgstr ""
+msgstr "اضافه کردن به کارت"
+
+#: .\templates\product\product_detail.html:63
+msgid "Categores"
+msgstr "دسته بندی"
+
+#: .\templates\product\product_detail.html:64
+msgid "Dress"
+msgstr "لباس"
+
+#: .\templates\product\product_detail.html:65
+msgid "Sumeer Clothes"
+msgstr "تابستانی"
+
+#: .\templates\product\product_detail.html:66
+msgid "Sumeer Cloth"
+msgstr "گرم"
+
+#: .\templates\product\product_detail.html:67
+msgid "Women dress"
+msgstr "زنانه"
 
 #: .\templates\product\product_detail.html:79
 msgid "Product description"
-msgstr ""
+msgstr "توضیحات محصول"
 
-#: .\templates\product\product_detail.html:168
+#: .\templates\product\product_detail.html:83
+msgid "Property"
+msgstr "ویژگی"
+
+#: .\templates\product\product_detail.html:88
+msgid "Comments"
+msgstr "نظر"
+
+#: .\templates\product\product_detail.html:107
+msgid "Weight"
+msgstr "وزن"
+
+#: .\templates\product\product_detail.html:108
+msgid " g 430 "
+msgstr "430 گرم"
+
+#: .\templates\product\product_detail.html:111
+msgid "Size"
+msgstr "اندازه"
+
+#: .\templates\product\product_detail.html:115
+msgid "Coler"
+msgstr "رنگ"
+
+#: .\templates\product\product_detail.html:117
+msgid "Black, "
+msgstr "سیاه، "
+
+#: .\templates\product\product_detail.html:118
+msgid "Green, "
+msgstr "سبز، "
+
+#: .\templates\product\product_detail.html:119
+msgid "Red, "
+msgstr "قرمز، "
+
+#: .\templates\product\product_detail.html:120
+msgid "orange,"
+msgstr "سبز، "
+
+#: .\templates\product\product_detail.html:131
+msgid "Comment for"
+msgstr "نظر برای"
+
+#: .\templates\product\product_detail.html:151
+msgid "Rated"
+msgstr "دارای رتبه"
+
+#: .\templates\product\product_detail.html:172
 msgid "Write your comment"
-msgstr ""
+msgstr "نظر خود را بنویسید"
 
-#: .\templates\product\product_detail.html:174
+#: .\templates\product\product_detail.html:179
 msgid "Submit"
-msgstr ""
+msgstr "ارسال"
+
+#: .\templates\product\product_detail.html:233
+msgid "About Us"
+msgstr "درباره ما"
+
+#: .\templates\product\product_detail.html:234
+msgid "Terms and Condition"
+msgstr "شرایط و مقرارت"
+
+#: .\templates\product\product_detail.html:235
+msgid "Contact us"
+msgstr "تماس با ما"
+
+#: .\templates\product\product_detail.html:252
+msgid "Start typing and press Enter to search"
+msgstr "تایپ کنید و جستو جو کنید"
+
+#: .\templates\product\product_detail.html:269
+msgid "Cart"
+msgstr "سبد خرید"
+
+#: .\templates\product\product_detail.html:280
+msgid "Product of 1"
+msgstr "محصول شماره یک"

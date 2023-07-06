@@ -8,6 +8,7 @@ class CommentInline(admin.TabularInline):
     fields = ['author', 'body', 'stars', 'active', ]
     extra = 1
 
+
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
     list_display = ['title', 'price', 'active', ]
