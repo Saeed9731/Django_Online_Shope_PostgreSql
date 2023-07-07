@@ -6,4 +6,7 @@ urlpatterns = [
     path('', include('pages.urls')),
     path('Products/', include('products.urls')),
     path('accounts/', include('allauth.urls')),
+
+    # Roseta (i18n)
+    path('rosetta/', include('rosetta.urls'))
 ]

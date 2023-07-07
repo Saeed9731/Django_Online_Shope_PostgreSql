@@ -119,28 +119,42 @@
     </div>
 </header>
 <!-- Header End -->
+{% if messages %}
+    <div class="container">
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}">
+                {{ message }}
+            </div>
+        {% endfor %}
 
+    </div>
+    {#    <ul class="">#}
+    {#        {% for message in messages %}#}
+    {#            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>#}
+    {#        {% endfor %}#}
+    {#    </ul>#}
+{% endif %}
 <!-- {% if user.is_authenticated %} -->
-<!-- <p> -->
-<!-- Hello {{ user.email }} -->
-<!-- </a> -->
-<!-- | -->
-<!-- <a href="{% url 'account_logout' %}"> -->
-<!-- Log-Out -->
-<!-- </a> -->
-<!-- </p> -->
-<!-- {% else %} -->
-<!-- <p> -->
-<!-- <a href="{% url 'account_login' %}"> -->
-<!-- Log-In -->
-<!-- </a> -->
-<!-- | -->
-<!-- <a href="{% url 'account_signup' %}"> -->
-<!-- Sign-Up -->
-<!-- </a> -->
-<!-- </p> -->
-<!--  -->
-<!-- {% endif %} -->
+    <!-- <p> -->
+    <!-- Hello {{ user.email }} -->
+    <!-- </a> -->
+    <!-- | -->
+    <!-- <a href="{% url 'account_logout' %}"> -->
+    <!-- Log-Out -->
+    <!-- </a> -->
+    <!-- </p> -->
+    <!-- {% else %} -->
+    <!-- <p> -->
+    <!-- <a href="{% url 'account_login' %}"> -->
+    <!-- Log-In -->
+    <!-- </a> -->
+    <!-- | -->
+    <!-- <a href="{% url 'account_signup' %}"> -->
+    <!-- Sign-Up -->
+    <!-- </a> -->
+    <!-- </p> -->
+    <!--  -->
+    <!-- {% endif %} -->
 <!-- ...................................... -->
 {% block content %}
 
