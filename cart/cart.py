@@ -12,6 +12,15 @@ class Cart:
 
         self.cart = cart
 
+    def remove(self, product):
+        """
+        Remove product of the cart
+        """
+        product_id = str(product.id)
+        if product_id  in self.cart:
+            del self.cart[product_id]
+            self.save()
+
     def add(self, product, quantity=1):
         """
         Add the specified product to the cart if it exits
