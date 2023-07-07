@@ -14,7 +14,7 @@ class Cart:
 
     def remove(self, product):
         """
-        Remove product of the cart
+        Remove product of the cart id
         """
         product_id = str(product.id)
         if product_id  in self.cart:
