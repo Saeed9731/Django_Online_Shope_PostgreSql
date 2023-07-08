@@ -2,7 +2,7 @@ from products.models import Product
 
 
 class Cart:
-    def __int__(self, request):
+    def __init__(self, request):
         """
         Initialize the cart
         """
