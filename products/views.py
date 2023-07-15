@@ -6,6 +6,10 @@ from django.contrib import messages
 from .models import Product, Comment
 from .forms import CommentForm
 
+
+# from cart.form import AddToCartProductForm
+
+
 class ProductsListView(generic.ListView):
     # model = Product
     queryset = Product.objects.filter(active=True)
@@ -21,7 +25,10 @@ class ProductDetailView(generic.DetailView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['comment_form'] = CommentForm()
-        return  context
+        # context['add_to_cart_form'] = AddToCartProductForm()
+        return context
+
+
 class CommentCreateView(generic.CreateView):
     model = Comment
     form_class = CommentForm
