@@ -2,6 +2,7 @@ from products.models import Product
 from django.contrib import messages
 from django.utils.translation import gettext as _
 
+
 class Cart:
     def __init__(self, request):
         """
@@ -60,7 +61,8 @@ class Cart:
             yield item
 
     def __len__(self):
-        return len(self.cart.keys())
+        # return len(self.cart.keys())
+        return sum(item['quantity'] for item in self.cart.values())
 
     def clear(self):
         del self.session['cart']
