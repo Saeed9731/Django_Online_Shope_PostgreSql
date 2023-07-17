@@ -1,0 +1,80 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-17 17:48+0330\n"
+"PO-Revision-Date: 2023-07-17 17:59+0330\n"
+"Last-Translator:   <>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Translated-Using: django-rosetta 0.9.9\n"
+
+#: .\cart.py:26
+msgid "Product successfully deleted"
+msgstr "محصول با موفقیت از سبد خرید حذف شد"
+
+#: .\cart.py:41
+msgid "Product successfully added to cart"
+msgstr "محصول با موفقیت به  سبد خرید اظافه شد"
+
+#: .\cart.py:67
+msgid "All product successfully clear"
+msgstr " سبد خرید با موفقیت خالی شد"
+
+#: .\templates\cart\cart_detail.html:9
+msgid "Cart detail"
+msgstr "سبد خرید"
+
+#: .\templates\cart\cart_detail.html:27
+msgid "product picture"
+msgstr "تصیویر محصول"
+
+#: .\templates\cart\cart_detail.html:28
+msgid "product name"
+msgstr "نام"
+
+#: .\templates\cart\cart_detail.html:29
+msgid "product price"
+msgstr "قیمت"
+
+#: .\templates\cart\cart_detail.html:30
+msgid "product quantity"
+msgstr "تعداد"
+
+#: .\templates\cart\cart_detail.html:31
+msgid "Total"
+msgstr "تعداد کل"
+
+#: .\templates\cart\cart_detail.html:53 .\templates\cart\cart_detail.html:76
+#: .\templates\cart\cart_detail.html:116
+msgid "$"
+msgstr "تومان"
+
+#: .\templates\cart\cart_detail.html:87
+msgid "clear cart"
+msgstr "خالی کردن سبد خرید"
+
+#: .\templates\cart\cart_detail.html:92
+msgid "Cart empty! Add some product to the car"
+msgstr "سبد خرید خالی است! محصولات را اظافه کنید"
+
+#: .\templates\cart\cart_detail.html:100
+msgid "total"
+msgstr "کل"
+
+#: .\templates\cart\cart_detail.html:112
+msgid "total price"
+msgstr "قیمت کل"
+
+#: .\templates\cart\cart_detail.html:123
+msgid "Registration orders"
+msgstr "ثبت سفارشات"

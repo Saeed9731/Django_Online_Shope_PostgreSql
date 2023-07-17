@@ -1,5 +1,6 @@
 {% load static %}
-
+{% load rosetta %}
+{% load i18n %}
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
@@ -48,22 +49,22 @@
                             <ul class="mainmenu d-lg-flex jusity-content-end jusity-content-lg-start pt-4">
                                 <li class="mainmenu__item menu-item-has-children active">
                                     <a href="{% url 'home' %}" class="mainmenu__link">
-                                        <span class="mm-text">خانه</span>
+                                        <span class="mm-text">{% trans 'Home' %}</span>
                                     </a>
                                 </li>
                                 <li class="mainmenu__item menu-item-has-children">
                                     <a href="{% url 'Product' %}" class="mainmenu__link">
-                                        <span class="mm-text">وبلاگ</span>
+                                        <span class="mm-text">{% trans 'Weblog' %}</span>
                                     </a>
                                 </li>
                                 <li class="mainmenu__item menu-item-has-children">
                                     <a href="#" class="mainmenu__link">
-                                        <span class="mm-text">صفحات</span>
+                                        <span class="mm-text">{% trans 'pages' %}</span>
                                     </a>
                                 </li>
                                 <li class="mainmenu__item">
                                     <a href="contact-us.html" class="mainmenu__link">
-                                        <span class="mm-text">تماس با ما</span>
+                                        <span class="mm-text">{% trans 'Contact us' %}</span>
                                     </a>
                                 </li>
                             </ul>
@@ -89,16 +90,16 @@
                             </a>
                             <ul class="user-info-menu">
                                 <li>
-                                    <a class="text-right" href="my-account.html">حساب کاربری</a>
+                                    <a class="text-right" href="my-account.html">{% trans 'Account' %}</a>
                                 </li>
                                 <li>
-                                    <a class="text-right" href="cart.html">سبد خرید</a>
+                                    <a class="text-right" href="cart.html">{% trans 'Cart' %}</a>
                                 </li>
                                 <li>
-                                    <a class="text-right" href="wishlist.html">علاقه مندی ها</a>
+                                    <a class="text-right" href="wishlist.html">{% trans 'Favorites' %}</a>
                                 </li>
                                 <li>
-                                    <a class="text-right" href="order-tracking.html">تاریخچه سفارشات</a>
+                                    <a class="text-right" href="order-tracking.html">{% trans 'Order history' %}</a>
                                 </li>
                             </ul>
                         </li>
@@ -122,8 +123,11 @@
 {% if messages %}
     <div class="container">
         {% for message in messages %}
-            <div class="alert alert-{{ message.tags }}">
+            <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
                 {{ message }}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
         {% endfor %}
 
@@ -134,6 +138,7 @@
     {#        {% endfor %}#}
     {#    </ul>#}
 {% endif %}
+
 <!-- {% if user.is_authenticated %} -->
     <!-- <p> -->
     <!-- Hello {{ user.email }} -->

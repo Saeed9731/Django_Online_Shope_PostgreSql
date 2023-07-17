@@ -1,5 +1,6 @@
 {% extends '_base.html' %}
-
+{% load rosetta %}
+{% load i18n %}
 
 {%block page_title%}
 home
@@ -9,7 +10,7 @@ home
 {% block content %}
     <a href="{% url 'about_us' %}">
         <h1>
-            Home page
+            {% trans 'Home page' %}
         </h1>
     </a>
 
