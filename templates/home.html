@@ -8,11 +8,14 @@
 
 
 {% block content %}
-    <a href="{% url 'about_us' %}">
-        <h1>
-            {% trans 'Home page' %}
-        </h1>
-    </a>
-{# {% include 'cart/cart_sidebar.html' %}#}
-
+    <body class="text-center">
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+        <main role="main" class="inner cover">
+            <a href="{% url 'about_us' %}">
+                <h1 class="cover-heading">{% trans 'Home page' %}</h1>
+            </a>
+            <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit
+                the text, and add your own fullscreen background photo to make it your own.</p>
+        </main>
+    </div>
 {% endblock %}

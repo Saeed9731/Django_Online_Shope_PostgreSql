@@ -1,15 +1,22 @@
 {% extends '_base.html' %}
 
+{% load rosetta %}
+{% load i18n %}
 
 {% block page_title %}
-about Us
+    {% trans 'about Us' %}
 {% endblock page_title %}
 
 {% block content %}
-    <h1>
-        <a href="{% url 'home' %}">
+    <body class="text-center">
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+        <main role="main" class="inner cover">
+            <a href="{% url 'home' %}">
+            <h1 class="cover-heading">{% trans 'About Us' %}</h1>
+            </a>
+            <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit
+                the text, and add your own fullscreen background photo to make it your own.</p>
+        </main>
 
-            About Us .....
-        </a>
-    </h1>
+    </div>
 {% endblock %}
