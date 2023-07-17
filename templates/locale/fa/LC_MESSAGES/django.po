@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-17 18:52+0330\n"
+"POT-Creation-Date: 2023-07-17 20:55+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,19 +33,19 @@ msgstr "صفحات"
 msgid "Contact us"
 msgstr "تماس با ما"
 
-#: .\_base.html:94
+#: .\_base.html:96
 msgid "Logout"
 msgstr "خارج شدن"
 
-#: .\_base.html:98
+#: .\_base.html:100
 msgid "Login"
 msgstr "وارد شدن"
 
-#: .\_base.html:102
+#: .\_base.html:104
 msgid "Signup"
 msgstr "ثبت نام"
 
-#: .\_base.html:106
+#: .\_base.html:108
 msgid "Cart"
 msgstr "سبد خربد"
 
@@ -90,6 +90,12 @@ msgid ""
 "This e-mail confirmation link expired or is invalid. Please <a href=\"%"
 "(email_url)s\">issue a new e-mail confirmation request</a>."
 msgstr ""
+
+#: .\home.html:6
+#, fuzzy
+#| msgid "Home"
+msgid "home"
+msgstr "خانه"
 
 #: .\home.html:13
 msgid "Home page"

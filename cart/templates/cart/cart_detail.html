@@ -12,6 +12,10 @@
 {% block content %}
     <!-- Main Content Wrapper Start -->
     <div class="main-content-wrapper">
+        <!-- Breadcrumb area Start -->
+    {% trans 'cart' as name %}
+        {% include 'top_header.html' with header_name=name %}
+        <!-- Breadcrumb area End -->
         <div class="page-content-inner ptb--80">
             <div class="container">
                 <div class="row">
@@ -84,7 +88,8 @@
                                     <div class="row no-gutters border-top pt--20 mt--20">
                                         <div class="col-sm-6 text-sm-right">
                                             <a href="{% url 'cart:cart_clear' %}">
-                                                <button type="submit" class="cart-form__btn">{% trans 'clear cart' %}</button>
+                                                <button type="submit"
+                                                        class="cart-form__btn">{% trans 'clear cart' %}</button>
                                             </a>
                                         </div>
                                     </div>
