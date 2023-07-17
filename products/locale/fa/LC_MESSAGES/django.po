@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-17 18:01+0330\n"
-"PO-Revision-Date: 2023-07-17 18:01+0330\n"
+"POT-Creation-Date: 2023-07-17 18:33+0330\n"
+"PO-Revision-Date: 2023-07-17 18:35+0330\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -138,35 +138,45 @@ msgstr "نظر برای"
 msgid "Rated"
 msgstr "دارای رتبه"
 
-#: .\templates\product\product_detail.html:181
+#: .\templates\product\product_detail.html:185
 msgid "Write your comment"
 msgstr "نظر خود را بنویسید"
 
-#: .\templates\product\product_detail.html:188
+#: .\templates\product\product_detail.html:192
 msgid "Submit"
 msgstr "ارسال"
 
-#: .\templates\product\product_detail.html:242
+#: .\templates\product\product_detail.html:196
+#, fuzzy
+#| msgid "Write your comment"
+msgid "To write your comment please "
+msgstr "نظر خود را بنویسید"
+
+#: .\templates\product\product_detail.html:197
+msgid "Login"
+msgstr "وارد شوید"
+
+#: .\templates\product\product_detail.html:251
 msgid "About Us"
 msgstr "درباره ما"
 
-#: .\templates\product\product_detail.html:243
+#: .\templates\product\product_detail.html:252
 msgid "Terms and Condition"
 msgstr "شرایط و مقرارت"
 
-#: .\templates\product\product_detail.html:244
+#: .\templates\product\product_detail.html:253
 msgid "Contact us"
 msgstr "تماس با ما"
 
-#: .\templates\product\product_detail.html:261
+#: .\templates\product\product_detail.html:270
 msgid "Start typing and press Enter to search"
 msgstr "تایپ کنید و جستو جو کنید"
 
-#: .\templates\product\product_detail.html:278
+#: .\templates\product\product_detail.html:287
 msgid "Cart"
 msgstr "سبد خرید"
 
-#: .\templates\product\product_detail.html:289
+#: .\templates\product\product_detail.html:298
 msgid "Product of 1"
 msgstr "محصول شماره یک"
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-17 18:03+0330\n"
+"POT-Creation-Date: 2023-07-17 18:52+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,21 +33,21 @@ msgstr "صفحات"
 msgid "Contact us"
 msgstr "تماس با ما"
 
-#: .\_base.html:93
-msgid "Account"
-msgstr "اکانت"
+#: .\_base.html:94
+msgid "Logout"
+msgstr "خارج شدن"
 
-#: .\_base.html:96
-msgid "Cart"
-msgstr "سبد خرید"
-
-#: .\_base.html:99
-msgid "Favorites"
-msgstr "علاقه مندی ها"
+#: .\_base.html:98
+msgid "Login"
+msgstr "وارد شدن"
 
 #: .\_base.html:102
-msgid "Order history"
-msgstr "تاریخ چه سفارشات"
+msgid "Signup"
+msgstr "ثبت نام"
+
+#: .\_base.html:106
+msgid "Cart"
+msgstr "سبد خربد"
 
 #: .\account\email\email_confirmation_message.txt:5
 #, python-format
@@ -94,3 +94,12 @@ msgstr ""
 #: .\home.html:13
 msgid "Home page"
 msgstr ""
+
+#~ msgid "Account"
+#~ msgstr "اکانت"
+
+#~ msgid "Favorites"
+#~ msgstr "علاقه مندی ها"
+
+#~ msgid "Order history"
+#~ msgstr "تاریخ چه سفارشات"
