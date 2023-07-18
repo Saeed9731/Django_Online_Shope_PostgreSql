@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-17 20:55+0330\n"
-"PO-Revision-Date: 2023-07-17 17:59+0330\n"
+"PO-Revision-Date: 2023-07-18 20:28+0330\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -89,7 +89,6 @@ msgid "Cart"
 msgstr "سبد خرید"
 
 #: .\templates\cart\cart_sidebar.html:36
-#, fuzzy
 #| msgid "total price"
 msgid "Total price"
 msgstr "قیمت کل"

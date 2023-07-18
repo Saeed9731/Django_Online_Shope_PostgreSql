@@ -13,8 +13,12 @@ class Product(models.Model):
     # description = models.TextField(verbose_name=_('Description'))
     description = RichTextField()
     price = models.PositiveIntegerField(verbose_name=_('Price'), default=0)
-    active = models.BooleanField(default=True)
+    active = models.BooleanField(verbose_name=_('Active'), default=True)
     image = models.ImageField(verbose_name=_('Product image'), upload_to='product/product_cover/', blank=True)
+    short_description = models.TextField(verbose_name=_('Short description'), blank=True)
+
+    reduction = models.BooleanField(verbose_name=_('reduction'), default=False)
+    price_reduction = models.PositiveIntegerField(verbose_name=_('Price reduction'), default=0)
 
     datetime_create = models.DateTimeField(default=timezone.now(), verbose_name=_('Date time created'))
     datetime_modified = models.DateTimeField(auto_now=True)
@@ -48,7 +52,7 @@ class Comment(models.Model):
         verbose_name='comments author',
     )
     body = models.TextField(verbose_name=_('Comment Text'))
-    stars = models.CharField(max_length=10, choices=PRODUCT_STARS, verbose_name=_('What are your score'))
+    stars = models.CharField(verbose_name=_('What are your score'),max_length=10, choices=PRODUCT_STARS)
 
     datetime_created = models.DateTimeField(auto_now_add=True)
     datetime_modified = models.DateTimeField(auto_now_add=True)

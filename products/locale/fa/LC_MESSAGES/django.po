@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-17 18:33+0330\n"
-"PO-Revision-Date: 2023-07-17 18:35+0330\n"
+"POT-Creation-Date: 2023-07-18 20:25+0330\n"
+"PO-Revision-Date: 2023-07-18 20:48+0330\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -18,168 +18,200 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Translated-Using: django-rosetta 0.9.9\n"
 
-#: .\models.py:31
+#: .\models.py:12
+msgid "Title"
+msgstr "نام محصول"
+
+#: .\models.py:15
+msgid "Price"
+msgstr "قیمت"
+
+#: .\models.py:16
+msgid "Active"
+msgstr "قابل نمایش باشد"
+
+#: .\models.py:17
+#| msgid "Product detail"
+msgid "Product image"
+msgstr "تصویر محصول"
+
+#: .\models.py:18
+#| msgid "Product description"
+msgid "Short description"
+msgstr "توضیحات کوتاه"
+
+#: .\models.py:20
+msgid "reduction"
+msgstr "تخفیف"
+
+#: .\models.py:21
+msgid "Price reduction"
+msgstr "تخفیف ویژه"
+
+#: .\models.py:23
+msgid "Date time created"
+msgstr "تاریخ"
+
+#: .\models.py:40
 msgid "Very Bad"
 msgstr "خیلی بد"
 
-#: .\models.py:32
+#: .\models.py:41
 msgid "Bad"
 msgstr "بد"
 
-#: .\models.py:33
+#: .\models.py:42
 msgid "Normal"
 msgstr "متوسط"
 
-#: .\models.py:34
+#: .\models.py:43
 msgid "Good"
 msgstr "خوب"
 
-#: .\models.py:35
+#: .\models.py:44
 msgid "Perfect"
 msgstr "عالی"
 
-#: .\models.py:45
+#: .\models.py:54
 msgid "Comment Text"
 msgstr "متن دیدگاه"
 
-#: .\models.py:46
+#: .\models.py:55
 msgid "What are your score"
 msgstr "امتیاز بدهید"
 
-#: .\templates\product\product_detail.html:9
+#: .\templates\product\product_detail.html:13
 msgid "Product detail"
 msgstr "توضیحات محصول"
 
-#: .\templates\product\product_detail.html:21
-msgid "Product detail of"
-msgstr " توضیحات محصول"
-
 #: .\templates\product\product_detail.html:46
+#: .\templates\product\product_detail.html:51
+#: .\templates\product\product_list.html:71
+#: .\templates\product\product_list.html:76
 msgid "$"
 msgstr "تومان"
 
-#: .\templates\product\product_detail.html:48
-msgid "21$"
-msgstr "210,000"
-
-#: .\templates\product\product_detail.html:62
+#: .\templates\product\product_detail.html:67
+#: .\templates\product\product_list.html:93
 msgid "Add to Cart"
 msgstr "اضافه کردن به کارت"
 
-#: .\templates\product\product_detail.html:72
+#: .\templates\product\product_detail.html:73
 msgid "Categores"
 msgstr "دسته بندی"
 
-#: .\templates\product\product_detail.html:73
+#: .\templates\product\product_detail.html:74
 msgid "Dress"
 msgstr "لباس"
 
-#: .\templates\product\product_detail.html:74
+#: .\templates\product\product_detail.html:75
 msgid "Sumeer Clothes"
 msgstr "تابستانی"
 
-#: .\templates\product\product_detail.html:75
+#: .\templates\product\product_detail.html:76
 msgid "Sumeer Cloth"
 msgstr "گرم"
 
-#: .\templates\product\product_detail.html:76
+#: .\templates\product\product_detail.html:77
 msgid "Women dress"
 msgstr "زنانه"
 
-#: .\templates\product\product_detail.html:88
+#: .\templates\product\product_detail.html:89
 msgid "Product description"
 msgstr "توضیحات محصول"
 
-#: .\templates\product\product_detail.html:92
+#: .\templates\product\product_detail.html:93
 msgid "Property"
 msgstr "ویژگی"
 
-#: .\templates\product\product_detail.html:97
+#: .\templates\product\product_detail.html:98
 msgid "Comments"
 msgstr "نظر"
 
-#: .\templates\product\product_detail.html:116
+#: .\templates\product\product_detail.html:117
 msgid "Weight"
 msgstr "وزن"
 
-#: .\templates\product\product_detail.html:117
+#: .\templates\product\product_detail.html:118
 msgid " g 430 "
 msgstr "430 گرم"
 
-#: .\templates\product\product_detail.html:120
+#: .\templates\product\product_detail.html:121
 msgid "Size"
 msgstr "اندازه"
 
-#: .\templates\product\product_detail.html:124
+#: .\templates\product\product_detail.html:125
 msgid "Coler"
 msgstr "رنگ"
 
-#: .\templates\product\product_detail.html:126
+#: .\templates\product\product_detail.html:127
 msgid "Black, "
 msgstr "سیاه، "
 
-#: .\templates\product\product_detail.html:127
+#: .\templates\product\product_detail.html:128
 msgid "Green, "
 msgstr "سبز، "
 
-#: .\templates\product\product_detail.html:128
+#: .\templates\product\product_detail.html:129
 msgid "Red, "
 msgstr "قرمز، "
 
-#: .\templates\product\product_detail.html:129
+#: .\templates\product\product_detail.html:130
 msgid "orange,"
 msgstr "سبز، "
 
-#: .\templates\product\product_detail.html:140
+#: .\templates\product\product_detail.html:141
 msgid "Comment for"
 msgstr "نظر برای"
 
-#: .\templates\product\product_detail.html:160
-msgid "Rated"
-msgstr "دارای رتبه"
-
-#: .\templates\product\product_detail.html:185
+#: .\templates\product\product_detail.html:180
 msgid "Write your comment"
 msgstr "نظر خود را بنویسید"
 
-#: .\templates\product\product_detail.html:192
+#: .\templates\product\product_detail.html:187
 msgid "Submit"
 msgstr "ارسال"
 
-#: .\templates\product\product_detail.html:196
-#, fuzzy
+#: .\templates\product\product_detail.html:191
 #| msgid "Write your comment"
 msgid "To write your comment please "
 msgstr "نظر خود را بنویسید"
 
-#: .\templates\product\product_detail.html:197
+#: .\templates\product\product_detail.html:192
 msgid "Login"
 msgstr "وارد شوید"
 
-#: .\templates\product\product_detail.html:251
+#: .\templates\product\product_detail.html:246
 msgid "About Us"
 msgstr "درباره ما"
 
-#: .\templates\product\product_detail.html:252
+#: .\templates\product\product_detail.html:247
 msgid "Terms and Condition"
 msgstr "شرایط و مقرارت"
 
-#: .\templates\product\product_detail.html:253
+#: .\templates\product\product_detail.html:248
 msgid "Contact us"
 msgstr "تماس با ما"
 
-#: .\templates\product\product_detail.html:270
+#: .\templates\product\product_detail.html:265
 msgid "Start typing and press Enter to search"
 msgstr "تایپ کنید و جستو جو کنید"
-
-#: .\templates\product\product_detail.html:287
-msgid "Cart"
-msgstr "سبد خرید"
-
-#: .\templates\product\product_detail.html:298
-msgid "Product of 1"
-msgstr "محصول شماره یک"
 
 #: .\views.py:43
 msgid "Your comment has been successfully registered"
 msgstr "نظر شما با موفقیت ثبت شد"
+
+#~ msgid "Product detail of"
+#~ msgstr " توضیحات محصول"
+
+#~ msgid "21$"
+#~ msgstr "210,000"
+
+#~ msgid "Rated"
+#~ msgstr "دارای رتبه"
+
+#~ msgid "Cart"
+#~ msgstr "سبد خرید"
+
+#~ msgid "Product of 1"
+#~ msgstr "محصول شماره یک"

@@ -7,6 +7,7 @@
 {% load comment_tags %}
 {% load jalali_tags %}
 {% load persian_translation_tags %}
+{% load reduction_price %}
 {% load humanize %}
 
 {% block page_title %}
@@ -39,18 +40,23 @@
                             <div class="product-summary pl-lg--30 pl-md--0 text-right p-4">
                                 <h3 class="product-title mb--20">{{ product.title }}</h3>
                                 <p class="product-short-description mb--20">
-                                    {{ product.description|safe }}
+                                    {{ product.short_description|truncatechars:300 }}
                                 </p>
                                 <div class="my-5 py-5 product-price-wrapper mb--25">
-                                    <span class="money text-success">
+                                    {% if not product.reduction %}
+                                        <span class="money text-success">
                                         {{ product.price|intcomma:False|translate_numbers }} {% trans '$' %}
-                                    </span>
-                                    <span class="price-separator">-</span>
-                                    <span class="money old-price ">
+                                        </span>
+                                    {% else %}
+                                        <span class="money text-success">
+                                        {{ product.price|price_reduction:product.price_reduction|intcomma:False|translate_numbers }} {% trans '$' %}
+                                        </span>
+                                        <span class="price-separator">-</span>
+                                        <span class="money old-price ">
                                         <span class="money old-price text-danger">
                                             {{ product.price|intcomma:False|translate_numbers }} {% trans '$' %}
-                                        </span>
-                                    </span>
+                                        </span></span>
+                                    {% endif %}
                                 </div>
                                 <div class="product-action d-flex align-items-sm-center align-content-center mb--30">
                                     <form action="{% url 'cart:cart_add' product.id %}" method="post">
@@ -158,15 +164,6 @@
                                                                                 {{ comment.datetime_created|to_jalali:'%Y %B %d'|translate_numbers }}
                                                                             </span>
                                                                         </div>
-                                                                        {#                                                                        <div class="product-rating">#}
-                                                                        {#                                                                            <div class="m-0 star-rating star-five">#}
-                                                                        {#                                                                                <span>#}
-                                                                        {#                                                                                    {% trans 'Rated' %}#}
-                                                                        {#                                                                                    <strong class="rating">#}
-                                                                        {#                                                                                        {{ comment.stars }}#}
-                                                                        {#                                                                                    </strong> out of 4</span>#}
-                                                                        {#                                                                            </div>#}
-                                                                        {#                                                                        </div>#}
                                                                     </div>
                                                                 </div>
                                                                 <p class="review__description text-right px-4 mr-5 pr-5 ">

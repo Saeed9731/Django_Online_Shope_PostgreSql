@@ -7,6 +7,7 @@
 {% load rosetta %}
 {% load persian_translation_tags %}
 {% load humanize %}
+{% load reduction_price %}
 
 {% block page_title %}
     {% trans 'Cart detail' %}
@@ -64,9 +65,15 @@
                                                         </h3>
                                                     </td>
                                                     <td class="product-price">
+                                                        {% if not item.product_obj.reduction %}
                                                             <span class="product-price-wrapper">
                                                                 <span class="money">{{ item.product_obj.price|intcomma:False|translate_numbers }} {% trans '$' %} </span>
                                                             </span>
+                                                        {% else %}
+                                                            <span class="product-price-wrapper">
+                                                                <span class="money">{{ item.product_obj.price|price_reduction:item.product_obj.price_reduction|intcomma:False|translate_numbers }} {% trans '$' %} </span>
+                                                            </span>
+                                                        {% endif %}
                                                     </td>
                                                     <td class="product-quantity">
                                                         <form class="d-flex"

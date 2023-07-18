@@ -3,6 +3,7 @@
 {% load rosetta %}
 {% load static %}
 {% load persian_translation_tags %}
+{% load reduction_price %}
 {% load humanize %}
 
 <!-- Mini Cart Start -->
@@ -18,7 +19,8 @@
                             <div class="mini-cart__product__image">
                                 <a href="{{ item.product_obj.get_absolute_url }}">
                                     {% if item.product_obj.image %}
-                                        <img class="m-auto" style="max-height: 400px;" src="{{ item.product_obj.image.url }}"
+                                        <img class="m-auto" style="max-height: 400px;"
+                                             src="{{ item.product_obj.image.url }}"
                                              alt="products">
                                     {% else %}
                                         <img class="m-auto" style="max-height: 400px;"
@@ -34,9 +36,19 @@
                                             &#10060;
                                         </a>
                                     </span>
-                                <span class="mini-cart__product__quantity">
-                                        <span>{{ item.product_obj.price|intcomma:False|translate_numbers  }} {% trans '$' %}</span> &#215; <span>{{ item.quantity }}</span>
+                                {% if not item.product_obj.reduction %}
+                                    <span class="mini-cart__product__quantity">
+                                        <span>{{ item.product_obj.price|intcomma:False|translate_numbers }} {% trans '$' %}
+                                        </span> &#215; <span>{{ item.quantity }}</span>
                                     </span>
+                                {% else %}
+                                    <span class="mini-cart__product__quantity">
+                                        <span>
+                                            {{ item.product_obj.price|price_reduction:item.product_obj.price_reduction|intcomma:False|translate_numbers }} {% trans '$' %}
+                                        </span> &#215; <span>{{ item.quantity }}
+                                    </span>
+                                    </span>
+                                {% endif %}
                             </div>
                         </li>
                     {% endfor %}
