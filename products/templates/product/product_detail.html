@@ -5,6 +5,7 @@
 {% load i18n %}
 {% load rosetta %}
 {% load comment_tags %}
+{% load jalali_tags %}
 
 {% block page_title %}
     {% trans 'Product detail' %}
@@ -28,7 +29,8 @@
                             {% if product.image %}
                                 <img class="m-auto" style="max-height: 400px;" src="{{ product.image.url }}" alt="">
                             {% else %}
-                                <img class="m-auto" style="max-height: 400px;" src="{% static 'img/blog/blog-3.jpg' %}" alt="">
+                                <img class="m-auto" style="max-height: 400px;" src="{% static 'img/blog/blog-3.jpg' %}"
+                                     alt="">
                             {% endif %}
                         </div>
                         <div class="col-12 col-sm-8 product-main-details mt-md--50">
@@ -142,18 +144,21 @@
                                                                             <strong class="review__author px-4">
                                                                                 {{ comment.author.username }}
                                                                             </strong>
-                                                                            <span class="review__dash">-</span>
-                                                                            <span class="review__published-date">{{ comment.datetime_created }}</span>
+                                                                            <br>
+{#                                                                            <span class="review__dash">-</span>#}
+                                                                            <span class="review__published-date">
+                                                                                {{ comment.datetime_created|to_jalali:'%Y %B %d' }}
+                                                                            </span>
                                                                         </div>
-                                                                        <div class="product-rating">
-                                                                            <div class="m-0 star-rating star-five">
-                                                                                <span>
-                                                                                    {% trans 'Rated' %}
-                                                                                    <strong class="rating">
-                                                                                        {{ comment.stars }}
-                                                                                    </strong> out of 4</span>
-                                                                            </div>
-                                                                        </div>
+{#                                                                        <div class="product-rating">#}
+{#                                                                            <div class="m-0 star-rating star-five">#}
+{#                                                                                <span>#}
+{#                                                                                    {% trans 'Rated' %}#}
+{#                                                                                    <strong class="rating">#}
+{#                                                                                        {{ comment.stars }}#}
+{#                                                                                    </strong> out of 4</span>#}
+{#                                                                            </div>#}
+{#                                                                        </div>#}
                                                                     </div>
                                                                 </div>
                                                                 <p class="review__description text-right px-4 mr-5 pr-5 ">

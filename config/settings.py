@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'rosetta',
+    'jalali_date',
 
     # internal  installation apps
     'accounts',
@@ -158,7 +159,7 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 
 # media files
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(os.path.join(BASE_DIR,'media/'))
+MEDIA_ROOT = os.path.join(os.path.join(BASE_DIR, 'media/'))
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
@@ -193,4 +194,29 @@ ACCOUNT_UNIQUE_EMAIL = True
 # For messages framework
 MESSAGE_TAGS = {
     messages.ERROR: 'danger',
+}
+
+# Jalali default setting
+JALALI_DATE_DEFAULTS = {
+    'Strftime': {
+        'date': '%y/%m/%d',
+        'datetime': '%H:%M:%S _ %y/%m/%d',
+    },
+    'Static': {
+        'js': [
+            # loading datepicker
+            'admin/js/django_jalali.min.js',
+            # OR
+            # 'admin/jquery.ui.datepicker.jalali/scripts/jquery.ui.core.js',
+            # 'admin/jquery.ui.datepicker.jalali/scripts/calendar.js',
+            # 'admin/jquery.ui.datepicker.jalali/scripts/jquery.ui.datepicker-cc.js',
+            # 'admin/jquery.ui.datepicker.jalali/scripts/jquery.ui.datepicker-cc-fa.js',
+            # 'admin/js/main.js',
+        ],
+        'css': {
+            'all': [
+                'admin/jquery.ui.datepicker.jalali/themes/base/jquery-ui.min.css',
+            ]
+        }
+    },
 }
