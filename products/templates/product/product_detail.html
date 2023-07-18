@@ -42,9 +42,15 @@
                                     {{ product.description }}
                                 </p>
                                 <div class="my-5 py-5 product-price-wrapper mb--25">
-                                    <span class="money text-success">{{ product.price|intcomma:False|translate_numbers }} {% trans '$' %}</span>
+                                    <span class="money text-success">
+                                        {{ product.price|intcomma:False|translate_numbers }} {% trans '$' %}
+                                    </span>
                                     <span class="price-separator">-</span>
-                                    <span class="money old-price text-danger">{{ product.price|intcomma:False|translate_numbers }} {% trans '$' %}</span>
+                                    <span class="money old-price ">
+                                        <span class="money old-price text-danger">
+                                            {{ product.price|intcomma:False|translate_numbers }} {% trans '$' %}
+                                        </span>
+                                    </span>
                                 </div>
                                 <div class="product-action d-flex align-items-sm-center align-content-center mb--30">
                                     <form action="{% url 'cart:cart_add' product.id %}" method="post">
@@ -147,20 +153,20 @@
                                                                                 {{ comment.author.username }}
                                                                             </strong>
                                                                             <br>
-{#                                                                            <span class="review__dash">-</span>#}
+                                                                            {#                                                                            <span class="review__dash">-</span>#}
                                                                             <span class="review__published-date">
                                                                                 {{ comment.datetime_created|to_jalali:'%Y %B %d'|translate_numbers }}
                                                                             </span>
                                                                         </div>
-{#                                                                        <div class="product-rating">#}
-{#                                                                            <div class="m-0 star-rating star-five">#}
-{#                                                                                <span>#}
-{#                                                                                    {% trans 'Rated' %}#}
-{#                                                                                    <strong class="rating">#}
-{#                                                                                        {{ comment.stars }}#}
-{#                                                                                    </strong> out of 4</span>#}
-{#                                                                            </div>#}
-{#                                                                        </div>#}
+                                                                        {#                                                                        <div class="product-rating">#}
+                                                                        {#                                                                            <div class="m-0 star-rating star-five">#}
+                                                                        {#                                                                                <span>#}
+                                                                        {#                                                                                    {% trans 'Rated' %}#}
+                                                                        {#                                                                                    <strong class="rating">#}
+                                                                        {#                                                                                        {{ comment.stars }}#}
+                                                                        {#                                                                                    </strong> out of 4</span>#}
+                                                                        {#                                                                            </div>#}
+                                                                        {#                                                                        </div>#}
                                                                     </div>
                                                                 </div>
                                                                 <p class="review__description text-right px-4 mr-5 pr-5 ">

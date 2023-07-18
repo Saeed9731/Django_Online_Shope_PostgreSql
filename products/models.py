@@ -5,10 +5,13 @@ from django.shortcuts import reverse
 from django.contrib.auth import get_user_model
 from django.utils.translation import gettext_lazy as _
 
+from ckeditor.fields import RichTextField
+
 
 class Product(models.Model):
     title = models.CharField(verbose_name=_('Title'), max_length=150)
-    description = models.TextField(verbose_name=_('Description'))
+    # description = models.TextField(verbose_name=_('Description'))
+    description = RichTextField()
     price = models.PositiveIntegerField(verbose_name=_('Price'), default=0)
     active = models.BooleanField(default=True)
     image = models.ImageField(verbose_name=_('Product image'), upload_to='product/product_cover/', blank=True)
