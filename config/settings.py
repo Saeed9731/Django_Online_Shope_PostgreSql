@@ -49,6 +49,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # New
+    'django.contrib.humanize',
 
     # external installation apps
     'crispy_forms',
