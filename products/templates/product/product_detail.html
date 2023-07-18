@@ -6,6 +6,7 @@
 {% load rosetta %}
 {% load comment_tags %}
 {% load jalali_tags %}
+{% load persian_translation_tags %}
 
 {% block page_title %}
     {% trans 'Product detail' %}
@@ -40,9 +41,9 @@
                                     {{ product.description }}
                                 </p>
                                 <div class="my-5 py-5 product-price-wrapper mb--25">
-                                    <span class="money text-success">{{ product.price }} {% trans '$' %}</span>
+                                    <span class="money text-success">{{ product.price|translate_numbers }} {% trans '$' %}</span>
                                     <span class="price-separator">-</span>
-                                    <span class="money old-price text-danger">{{ product.price }} {% trans '$' %}</span>
+                                    <span class="money old-price text-danger">{{ product.price|translate_numbers }} {% trans '$' %}</span>
                                 </div>
                                 <div class="product-action d-flex align-items-sm-center align-content-center mb--30">
                                     <form action="{% url 'cart:cart_add' product.id %}" method="post">
@@ -147,7 +148,7 @@
                                                                             <br>
 {#                                                                            <span class="review__dash">-</span>#}
                                                                             <span class="review__published-date">
-                                                                                {{ comment.datetime_created|to_jalali:'%Y %B %d' }}
+                                                                                {{ comment.datetime_created|to_jalali:'%Y %B %d'|translate_numbers }}
                                                                             </span>
                                                                         </div>
 {#                                                                        <div class="product-rating">#}

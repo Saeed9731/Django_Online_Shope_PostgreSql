@@ -63,6 +63,7 @@ INSTALLED_APPS = [
     'pages',
     'products.apps.ProductsConfig',
     'cart',
+    'persian_tr',
 ]
 
 SITE_ID = 1
