@@ -13,7 +13,7 @@
     <!-- Main Content Wrapper Start -->
     <div class="main-content-wrapper">
         <!-- Breadcrumb area Start -->
-    {% trans 'cart' as name %}
+        {% trans 'cart' as name %}
         {% include 'top_header.html' with header_name=name %}
         <!-- Breadcrumb area End -->
         <div class="page-content-inner ptb--80">
@@ -43,7 +43,15 @@
                                                             <i class="flaticon flaticon-cross"></i>
                                                         </a></td>
                                                     <td class="product-thumbnail text-left">
-                                                        <img src="{% static 'img/products/prod-10-70x88.jpg' %} ">
+                                                        {% if item.product_obj.image %}
+                                                            <img class="m-auto" style="max-height: 400px;"
+                                                                 src="{{ item.product_obj.image.url }}"
+                                                                 alt="products">
+                                                        {% else %}
+                                                            <img class="m-auto" style="max-height: 400px;"
+                                                                 src="{% static 'img/products/prod-10-70x88.jpg' %}"
+                                                                 alt="products">
+                                                        {% endif %}
                                                     </td>
                                                     <td class="product-name">
                                                         <h3>
@@ -104,14 +112,6 @@
                             <div class="cart-totals">
                                 <h5 class="font-size-14 font-bold mb--15">{% trans 'total' %}</h5>
                                 <div class="cart-calculator">
-                                    {#                                    <div class="cart-calculator__item">#}
-                                    {#                                        <div class="cart-calculator__item--head">#}
-                                    {#                                            <span>{% trans 'total' %}</span>#}
-                                    {#                                        </div>#}
-                                    {#                                        <div class="cart-calculator__item--value">#}
-                                    {#                                            <span>۳۴۶,۰۰۰ {% trans '$' %}</span>#}
-                                    {#                                        </div>#}
-                                    {#                                    </div>#}
                                     <div class="cart-calculator__item order-total">
                                         <div class="cart-calculator__item--head">
                                             <span>{% trans 'total price' %}</span>
