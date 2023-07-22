@@ -62,11 +62,12 @@ INSTALLED_APPS = [
     'jalali_date',
 
     # internal  installation apps
-    'accounts',
-    'pages',
+    'accounts.apps.AccountsConfig',
+    'pages.apps.PagesConfig',
     'products.apps.ProductsConfig',
-    'cart',
-    'persian_tr',
+    'cart.apps.CartConfig',
+    'persian_tr.apps.PersianTrConfig',
+    'orders.apps.OrdersConfig',
 ]
 
 SITE_ID = 1
