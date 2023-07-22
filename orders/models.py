@@ -16,7 +16,7 @@ class Order(models.Model):
     city = models.CharField(_('city'), max_length=15)
     address = models.TextField(_('address'))
     postal_code = models.CharField(_('postal code'), max_length=15)
-    orders_note = models.CharField(_('postal code'), max_length=700, blank=True)
+    orders_note = models.CharField(_('oder note'), max_length=700, blank=True)
 
     datetime_create = models.DateTimeField(_('Date time created'), auto_now=True)
     datetime_modified = models.DateTimeField(_('Date time modified'), auto_now=True)
