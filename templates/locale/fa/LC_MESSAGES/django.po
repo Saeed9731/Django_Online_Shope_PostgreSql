@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-17 21:03+0330\n"
+"POT-Creation-Date: 2023-07-23 20:48+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,14 +22,14 @@ msgid "Home"
 msgstr "خانه"
 
 #: .\_base.html:57
-msgid "Weblog"
+msgid "weblog"
 msgstr "وبسایت"
 
 #: .\_base.html:62
 msgid "pages"
 msgstr "صفحات"
 
-#: .\_base.html:67
+#: .\_base.html:67 .\footer.html:20
 msgid "Contact us"
 msgstr "تماس با ما"
 
@@ -91,15 +91,21 @@ msgid ""
 "(email_url)s\">issue a new e-mail confirmation request</a>."
 msgstr ""
 
+#: .\footer.html:18
+msgid "About Us"
+msgstr "در باره ما"
+
+#: .\footer.html:19
+msgid "Terms and Condition"
+msgstr ""
+
 #: .\home.html:6
-#, fuzzy
-#| msgid "Home"
 msgid "home"
 msgstr "خانه"
 
-#: .\home.html:13
+#: .\home.html:15
 msgid "Home page"
-msgstr ""
+msgstr "صفجه خانه"
 
 #~ msgid "Account"
 #~ msgstr "اکانت"

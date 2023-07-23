@@ -117,28 +117,32 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
-                        <div class="cart-collaterals">
-                            <div class="cart-totals">
-                                <h5 class="font-size-14 font-bold mb--15">{% trans 'total' %}</h5>
-                                <div class="cart-calculator">
-                                    <div class="cart-calculator__item order-total">
-                                        <div class="cart-calculator__item--head">
-                                            <span>{% trans 'total price' %}</span>
-                                        </div>
-                                        <div class="cart-calculator__item--value">
+                    {% if cart %}
+                        <div class="col-lg-4">
+                            <div class="cart-collaterals">
+                                <div class="cart-totals">
+                                    <h5 class="font-size-14 font-bold mb--15">{% trans 'total' %}</h5>
+                                    <div class="cart-calculator">
+                                        <div class="cart-calculator__item order-total">
+                                            <div class="cart-calculator__item--head">
+                                                <span>{% trans 'total price' %}</span>
+                                            </div>
+                                            <div class="cart-calculator__item--value">
                                                 <span class="product-price-wrapper">
                                                     <span class="money">{{ cart.get_total_price|intcomma:False|translate_numbers }} {% trans '$' %}</span>
                                                 </span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                                <a href="{% url 'order_create' %}"
+                                   class="btn btn-fullwidth btn-bg-red btn-color-white btn-hover-2">
+                                    {% trans 'Registration orders' %}
+                                </a>
                             </div>
-                            <a href="{% url 'order_create' %}" class="btn btn-fullwidth btn-bg-red btn-color-white btn-hover-2">
-                                {% trans 'Registration orders' %}
-                            </a>
                         </div>
-                    </div>
+                    {% endif %}
+
                 </div>
             </div>
         </div>
