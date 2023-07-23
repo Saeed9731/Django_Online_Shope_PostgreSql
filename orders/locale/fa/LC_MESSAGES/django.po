@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-23 11:24+0330\n"
-"PO-Revision-Date: 2023-07-23 11:25+0330\n"
+"POT-Creation-Date: 2023-07-23 13:13+0330\n"
+"PO-Revision-Date: 2023-07-23 13:14+0330\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -22,11 +22,11 @@ msgstr ""
 msgid "is paid"
 msgstr "پرداخت شده"
 
-#: .\models.py:11
+#: .\models.py:11 .\templates\orders\order_create.html:37
 msgid "first name"
 msgstr "نام"
 
-#: .\models.py:12
+#: .\models.py:12 .\templates\orders\order_create.html:43
 msgid "last name"
 msgstr "نام خانوادگی"
 
@@ -42,7 +42,7 @@ msgstr "استان"
 msgid "city"
 msgstr "شهر"
 
-#: .\models.py:17
+#: .\models.py:17 .\templates\orders\order_create.html:51
 msgid "address"
 msgstr "ادرس"
 
@@ -66,6 +66,10 @@ msgstr "تاریخ اخرین تغییر"
 #: .\templates\orders\order_create.html:21
 msgid "Order detail"
 msgstr "ثبت سفارش"
+
+#: .\templates\orders\order_create.html:139
+msgid "total"
+msgstr "کل"
 
 #~ msgid "Oder detail"
 #~ msgstr "ثبت سفارش"
