@@ -21,7 +21,7 @@
         {% trans 'Order detail' as name %}
         {% include 'top_header.html' with header_name=name %}
         <!-- Breadcrumb area End -->
-        <div class="page-content-inner">
+        <div class="page-content-inner pb--5">
             <div class="container">
                 <div class="row pt--50 pt-md--40 pt-sm--20"></div>
                 <div class="row pb--80 pb-md--60 pb-sm--40">
@@ -31,50 +31,76 @@
                             <h2>جزئیات سفارش</h2>
                         </div>
                         <div class="checkout-form">
+                            {#                            {% csrf_token %}#}
+                            {#                            {{ form|crispy }}#}
                             <form action="#" class="form form--checkout">
                                 <div class="form-row mb--20">
                                     <div class="form__group col-md-6 mb-sm--30">
-                                        <label for="billing_fname" class="form__label form__label--2">{% trans 'first name' %}<span
+                                        <label for="billing_fname"
+                                               class="form__label form__label--2">{% trans 'first name' %}<span
                                                 class="required">*</span></label>
-                                        <input type="text" name="billing_fname" id="billing_fname"
+                                        <input type="text" name="first_name" id="billing_fname"
                                                class="form__input form__input--2">
                                     </div>
                                     <div class="form__group col-md-6">
-                                        <label for="billing_lname" class="form__label form__label--2">{% trans 'last name' %}<span
+                                        <label for="billing_lname"
+                                               class="form__label form__label--2">{% trans 'last name' %}<span
                                                 class="required">*</span></label>
-                                        <input type="text" name="billing_lname" id="billing_lname"
+                                        <input type="text" name="last_name" id="billing_lname"
+                                               class="form__input form__input--2">
+                                    </div>
+                                </div>
+                                <div class="form-row mb--20">
+                                    <div class="form__group col-md-6 mb-sm--30">
+                                        <label for="billing_fname"
+                                               class="form__label form__label--2">{% trans 'state' %}<span
+                                                class="required">*</span></label>
+                                        <input type="text" name="State" id="billing_fname"
+                                               class="form__input form__input--2">
+                                    </div>
+                                    <div class="form__group col-md-6">
+                                        <label for="billing_lname"
+                                               class="form__label form__label--2">{% trans 'city' %}<span
+                                                class="required">*</span></label>
+                                        <input type="text" name="city" id="billing_lname"
                                                class="form__input form__input--2">
                                     </div>
                                 </div>
                                 <div class="form-row mb--20">
                                     <div class="form__group col-12">
-                                        <label for="billing_company" class="form__label form__label--2">{% trans 'address' %}</label>
-                                        <input type="text" name="billing_company" id="billing_company"
+                                        <label for="billing_company"
+                                               class="form__label form__label--2">{% trans 'address' %}<span
+                                                class="required">*</span></label>
+                                        <textarea class="form__input form__input--2 form__input--textarea"
+                                                  type="text" name="address" id="billing_company"
+                                                  placeholder="{% trans 'Type your address' %}"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-row mb--20">
+                                    <div class="form__group col-12">
+                                        <label for="billing_phone"
+                                               class="form__label form__label--2">{% trans 'phone number' %}<span
+                                                class="required">*</span></label>
+                                        <input type="text" name="phone_number" id="billing_phone"
                                                class="form__input form__input--2">
                                     </div>
                                 </div>
                                 <div class="form-row mb--20">
                                     <div class="form__group col-12">
-                                        <label for="billing_phone" class="form__label form__label--2">شماره همراه <span
+                                        <label for="billing_email"
+                                               class="form__label form__label--2">{% trans 'postal code' %}<span
                                                 class="required">*</span></label>
-                                        <input type="text" name="billing_phone" id="billing_phone"
-                                               class="form__input form__input--2">
-                                    </div>
-                                </div>
-                                <div class="form-row mb--20">
-                                    <div class="form__group col-12">
-                                        <label for="billing_email" class="form__label form__label--2">ایمیل <span
-                                                class="required">*</span></label>
-                                        <input type="email" name="billing_email" id="billing_email"
+                                        <input type="email" name="postal_cod" id="billing_email"
                                                class="form__input form__input--2">
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="form__group col-12">
-                                        <label for="orderNotes" class="form__label form__label--2">یادداشت شما</label>
+                                        <label for="orderNotes"
+                                               class="form__label form__label--2">{% trans 'order note' %}</label>
                                         <textarea class="form__input form__input--2 form__input--textarea"
-                                                  id="orderNotes" name="orderNotes"
-                                                  placeholder="اگر یادداشتی دارید در اینجا وارد کنید. در غیر این صورت این مکان را خالی بگذارید"></textarea>
+                                                  id="orderNotes" name="orders_note"
+                                                  placeholder="{% trans 'If you have any notes please enter here' %}"></textarea>
                                     </div>
                                 </div>
                             </form>

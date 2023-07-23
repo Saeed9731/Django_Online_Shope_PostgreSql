@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-23 13:13+0330\n"
-"PO-Revision-Date: 2023-07-23 13:14+0330\n"
+"POT-Creation-Date: 2023-07-23 14:31+0330\n"
+"PO-Revision-Date: 2023-07-23 14:31+0330\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -22,43 +22,47 @@ msgstr ""
 msgid "is paid"
 msgstr "پرداخت شده"
 
-#: .\models.py:11 .\templates\orders\order_create.html:37
+#: .\models.py:11 .\templates\orders\order_create.html:40
 msgid "first name"
 msgstr "نام"
 
-#: .\models.py:12 .\templates\orders\order_create.html:43
+#: .\models.py:12 .\templates\orders\order_create.html:47
 msgid "last name"
 msgstr "نام خانوادگی"
 
-#: .\models.py:13
+#: .\models.py:13 .\templates\orders\order_create.html:81
 msgid "phone number"
 msgstr "شماره تلفن"
 
-#: .\models.py:15
+#: .\models.py:15 .\templates\orders\order_create.html:56
 msgid "state"
 msgstr "استان"
 
-#: .\models.py:16
+#: .\models.py:16 .\templates\orders\order_create.html:63
 msgid "city"
 msgstr "شهر"
 
-#: .\models.py:17 .\templates\orders\order_create.html:51
+#: .\models.py:17 .\templates\orders\order_create.html:72
 msgid "address"
 msgstr "ادرس"
 
-#: .\models.py:18
+#: .\models.py:18 .\templates\orders\order_create.html:90
 msgid "postal code"
 msgstr "کد پستی"
 
 #: .\models.py:19
 msgid "oder note"
-msgstr "توضیح سفارش"
+msgstr "یاداشت سفارش"
 
-#: .\models.py:21
+#: .\models.py:20
+msgid "Email"
+msgstr "ایمیل"
+
+#: .\models.py:22
 msgid "Date time created"
 msgstr "تاریخ ثبت سفارش"
 
-#: .\models.py:22
+#: .\models.py:23
 msgid "Date time modified"
 msgstr "تاریخ اخرین تغییر"
 
@@ -67,7 +71,23 @@ msgstr "تاریخ اخرین تغییر"
 msgid "Order detail"
 msgstr "ثبت سفارش"
 
-#: .\templates\orders\order_create.html:139
+#: .\templates\orders\order_create.html:75
+msgid "Type your address"
+msgstr "آدرس خود را وارد کنید."
+
+#: .\templates\orders\order_create.html:99
+#, fuzzy
+#| msgid "oder note"
+msgid "order note"
+msgstr "یاداشت سفارش"
+
+#: .\templates\orders\order_create.html:102
+msgid "If you have any notes please enter here"
+msgstr ""
+"اگر یادداشتی دارید در اینجا وارد کنید. در غیر این صورت این مکان را خالی "
+"بگذارید"
+
+#: .\templates\orders\order_create.html:164
 msgid "total"
 msgstr "کل"
 
