@@ -65,7 +65,6 @@ class Cart:
             yield item
 
     def __len__(self):
-        # return len(self.cart.keys())
         return sum(item['quantity'] for item in self.cart.values())
 
     def clear(self):
@@ -74,8 +73,6 @@ class Cart:
         self.save()
 
     def get_total_price(self):
-        # product_ids = self.cart.keys()
-        # products = Product.objects.filter(id__in=product_ids)
         i = 0
         for item in self.cart.values():
             if item['product_obj'].reduction:
@@ -90,5 +87,23 @@ class Cart:
                 item_price_total = 0
 
             total_price = item_reduction_price_total + item_price_total
+            i += total_price
+        return i
+
+    def get_total_price_without_reduction(self):
+        return sum(item['product_obj'].price * item['quantity'] for item in self.cart.values())
+
+    def get_total_quantity(self):
+        return self.__len__()
+
+    def get_total_reduction(self):
+        i = 0
+        for item in self.cart.values():
+            if item['product_obj'].reduction:
+                item_reduction = item['product_obj'].price_reduction * item['quantity']
+            else:
+                item_reduction = 0
+
+            total_price = item_reduction
             i += total_price
         return i

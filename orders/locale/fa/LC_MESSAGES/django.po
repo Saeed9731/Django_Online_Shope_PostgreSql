@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-23 00:53+0330\n"
-"PO-Revision-Date: 2023-07-23 00:57+0330\n"
+"POT-Creation-Date: 2023-07-23 11:24+0330\n"
+"PO-Revision-Date: 2023-07-23 11:25+0330\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -61,3 +61,11 @@ msgstr "تاریخ ثبت سفارش"
 #: .\models.py:22
 msgid "Date time modified"
 msgstr "تاریخ اخرین تغییر"
+
+#: .\templates\orders\order_create.html:14
+#: .\templates\orders\order_create.html:21
+msgid "Order detail"
+msgstr "ثبت سفارش"
+
+#~ msgid "Oder detail"
+#~ msgstr "ثبت سفارش"
