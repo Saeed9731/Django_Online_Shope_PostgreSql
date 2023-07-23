@@ -28,25 +28,29 @@
                     <!-- Checkout Area Start -->
                     <div class="col-lg-6">
                         <div class="checkout-title mt--10">
-                            <h2>جزئیات سفارش</h2>
+                            <h2>{% trans 'order detail' %}</h2>
                         </div>
                         <div class="checkout-form">
-                            {#                            {% csrf_token %}#}
-                            {#                            {{ form|crispy }}#}
-                            <form action="#" class="form form--checkout">
+                            <form action="" method="POST" class="form form--checkout">
+                                {% csrf_token %}
+                                {% if form.errors %}
+                                    <div class="alert alert-danger">
+                                        {{ form.errors }}
+                                    </div>
+                                {% endif %} 
                                 <div class="form-row mb--20">
                                     <div class="form__group col-md-6 mb-sm--30">
                                         <label for="billing_fname"
                                                class="form__label form__label--2">{% trans 'first name' %}<span
                                                 class="required">*</span></label>
-                                        <input type="text" name="first_name" id="billing_fname"
+                                        <input type="text" name="{{ form.first_name.name }}" id="billing_fname"
                                                class="form__input form__input--2">
                                     </div>
                                     <div class="form__group col-md-6">
                                         <label for="billing_lname"
                                                class="form__label form__label--2">{% trans 'last name' %}<span
                                                 class="required">*</span></label>
-                                        <input type="text" name="last_name" id="billing_lname"
+                                        <input type="text" name="{{ form.last_name.name }}" id="billing_lname"
                                                class="form__input form__input--2">
                                     </div>
                                 </div>
@@ -55,14 +59,14 @@
                                         <label for="billing_fname"
                                                class="form__label form__label--2">{% trans 'state' %}<span
                                                 class="required">*</span></label>
-                                        <input type="text" name="State" id="billing_fname"
+                                        <input type="text" name="{{ form.State.name }}" id="billing_fname"
                                                class="form__input form__input--2">
                                     </div>
                                     <div class="form__group col-md-6">
                                         <label for="billing_lname"
                                                class="form__label form__label--2">{% trans 'city' %}<span
                                                 class="required">*</span></label>
-                                        <input type="text" name="city" id="billing_lname"
+                                        <input type="text" name="{{ form.city.name }}" id="billing_lname"
                                                class="form__input form__input--2">
                                     </div>
                                 </div>
@@ -72,7 +76,7 @@
                                                class="form__label form__label--2">{% trans 'address' %}<span
                                                 class="required">*</span></label>
                                         <textarea class="form__input form__input--2 form__input--textarea"
-                                                  type="text" name="address" id="billing_company"
+                                                  type="text" name="{{ form.address.name }}" id="billing_company"
                                                   placeholder="{% trans 'Type your address' %}"></textarea>
                                     </div>
                                 </div>
@@ -81,16 +85,16 @@
                                         <label for="billing_phone"
                                                class="form__label form__label--2">{% trans 'phone number' %}<span
                                                 class="required">*</span></label>
-                                        <input type="text" name="phone_number" id="billing_phone"
+                                        <input type="text" name="{{ form.phone_number.name }}" id="billing_phone"
                                                class="form__input form__input--2">
                                     </div>
                                 </div>
                                 <div class="form-row mb--20">
                                     <div class="form__group col-12">
-                                        <label for="billing_email"
+                                        <label for="billing_post"
                                                class="form__label form__label--2">{% trans 'postal code' %}<span
                                                 class="required">*</span></label>
-                                        <input type="email" name="postal_cod" id="billing_email"
+                                        <input type="text" name="{{ form.postal_code.name }}" id="billing_post"
                                                class="form__input form__input--2">
                                     </div>
                                 </div>
@@ -99,10 +103,11 @@
                                         <label for="orderNotes"
                                                class="form__label form__label--2">{% trans 'order note' %}</label>
                                         <textarea class="form__input form__input--2 form__input--textarea"
-                                                  id="orderNotes" name="orders_note"
+                                                  id="orderNotes" name="{{ form.orders_note.name }}"
                                                   placeholder="{% trans 'If you have any notes please enter here' %}"></textarea>
                                     </div>
-                                </div>
+                                </div><br>
+                                <button class="btn" type="submit">{% trans 'Send' %}</button>
                             </form>
                         </div>
                     </div>
