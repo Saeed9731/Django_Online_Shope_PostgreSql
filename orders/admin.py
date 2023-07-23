@@ -6,7 +6,7 @@ from jalali_date.admin import ModelAdminJalaliMixin
 
 class OderItemInline(admin.TabularInline):
     model = OderItem
-    fields = ['order', 'product', 'quantity', 'price', ]
+    fields = ['order', 'product', 'quantity', 'price', 'reduction', 'price_reduction', 'total_price']
     extra = 1
 
 
@@ -21,4 +21,4 @@ class OrderAdmin(ModelAdminJalaliMixin, admin.ModelAdmin):
 
 @admin.register(OderItem)
 class OderItemAdmin(admin.ModelAdmin):
-    list_display = ['order', 'product', 'quantity', 'price', ]
+    list_display = ['order', 'product', 'quantity', 'price', 'reduction','price_reduction', 'total_price']

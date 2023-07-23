@@ -1,6 +1,5 @@
 from django.db import models
 from django.conf import settings
-
 from django.utils.translation import gettext_lazy as _
 
 
@@ -32,5 +31,10 @@ class OderItem(models.Model):
     quantity = models.PositiveIntegerField(default=1)
     price = models.PositiveIntegerField()
 
+    reduction = models.BooleanField(default=False)
+    price_reduction = models.PositiveIntegerField(default=0)
+    total_price = models.PositiveIntegerField()
+
     def __str__(self):
-        return f'OrdrItem {self.id}:  {self.product} X {self.quantity} (price:{self.price})'
+        return f'OrdrItem {self.id}:  {self.product} X {self.quantity} (price:{self.price}, price reduction:{self.price_reduction}) reduction:{self.reduction}' +\
+            f' total price: {self.total_price}'
