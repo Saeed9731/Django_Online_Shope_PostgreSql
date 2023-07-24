@@ -120,11 +120,11 @@
                                 <table class="table th-lg order-table order-table-5">
                                     <thead>
                                     <tr>
-                                        <th>محصول</th>
-                                        <th class="text-right">تعداد</th>
-                                        <th class="text-right">قیمت نهایی</th>
-                                        <th class="text-right">قیمت بدون تخفیف</th>
-                                        <th class="text-right">تخفیف</th>
+                                        <th>{% trans 'Product' %}</th>
+                                        <th class="text-right">{% trans 'quantity' %}</th>
+                                        <th class="text-right">{% trans 'total price' %}</th>
+                                        <th class="text-right">{% trans 'price without discount' %}</th>
+                                        <th class="text-right">{% trans 'discount' %}</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -177,12 +177,12 @@
                                 </table>
                             </div>
                             <div class="checkout-payment">
-                                <h2 class="py-5">روش پرداخت</h2>
+                                <h2 class="py-5">{% trans 'Payment Method' %}</h2>
                                 <form action="#" class="payment-form">
                                     <div class="payment-group mb--10">
                                         <div class="payment-radio">
                                             <input type="radio" value="bank" name="payment-method" id="bank" checked>
-                                            <label class="payment-label" for="cheque">درگاه آنلاین زرین پال</label>
+                                            <label class="payment-label" for="cheque">{% trans 'Zarin pal online portal' %}</label>
                                         </div>
                                     </div>
                                 </form>

@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-23 20:27+0330\n"
-"PO-Revision-Date: 2023-07-23 20:31+0330\n"
+"POT-Creation-Date: 2023-07-24 10:36+0330\n"
+"PO-Revision-Date: 2023-07-24 10:39+0330\n"
 "Last-Translator: Saeed mahmoudi <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -78,7 +78,6 @@ msgid "Order detail"
 msgstr "ثبت سفارش"
 
 #: .\templates\orders\order_create.html:31
-#| msgid "Order detail"
 msgid "order detail"
 msgstr " سفارشات"
 
@@ -87,7 +86,6 @@ msgid "Type your address"
 msgstr "آدرس خود را وارد کنید."
 
 #: .\templates\orders\order_create.html:104
-#| msgid "oder note"
 msgid "order note"
 msgstr "یاداشت سفارش"
 
@@ -95,9 +93,38 @@ msgstr "یاداشت سفارش"
 msgid "Send"
 msgstr "ارسال"
 
+#: .\templates\orders\order_create.html:123
+msgid "Product"
+msgstr "محصول"
+
+#: .\templates\orders\order_create.html:124
+msgid "quantity"
+msgstr "تعداد"
+
+#: .\templates\orders\order_create.html:125
+#| msgid "postal code"
+msgid "total price"
+msgstr "قیمت کل"
+
+#: .\templates\orders\order_create.html:126
+msgid "price without discount"
+msgstr "قیمت بدون تخفیف"
+
+#: .\templates\orders\order_create.html:127
+msgid "discount"
+msgstr "تخفیف"
+
 #: .\templates\orders\order_create.html:170
 msgid "total"
 msgstr "کل"
+
+#: .\templates\orders\order_create.html:180
+msgid "Payment Method"
+msgstr "روش پرداخت"
+
+#: .\templates\orders\order_create.html:185
+msgid "Zarin pal online portal"
+msgstr "درگاه آنلاین  زرین پال "
 
 #: .\views.py:17
 msgid "You can not proceed to checkout page because your cart is empty !!!"
