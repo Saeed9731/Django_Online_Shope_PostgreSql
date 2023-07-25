@@ -68,6 +68,7 @@ INSTALLED_APPS = [
     'cart.apps.CartConfig',
     'persian_tr.apps.PersianTrConfig',
     'orders.apps.OrdersConfig',
+    'payment.apps.PaymentConfig',
 ]
 
 SITE_ID = 1
@@ -201,6 +202,9 @@ ACCOUNT_UNIQUE_EMAIL = True
 MESSAGE_TAGS = {
     messages.ERROR: 'danger',
 }
+
+# ZARIN PALL MERCHANT ID
+ZARINAPAL_MERCHANT_ID = env("DJANGO_PAYMENT_MERCHANT_ID")
 
 # Jalali default setting
 JALALI_DATE_DEFAULTS = {

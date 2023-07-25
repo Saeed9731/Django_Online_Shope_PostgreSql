@@ -78,13 +78,10 @@ class Cart:
             if item['product_obj'].reduction:
                 item_reduction_price_total = (item['product_obj'].price - item['product_obj'].price_reduction) * item[
                     'quantity']
-            else:
-                item_reduction_price_total = 0
-
-            if not item['product_obj'].reduction:
-                item_price_total = item['product_obj'].price * item['quantity']
-            else:
                 item_price_total = 0
+            else:
+                item_price_total = item['product_obj'].price * item['quantity']
+                item_reduction_price_total = 0
 
             total_price = item_reduction_price_total + item_price_total
             i += total_price
