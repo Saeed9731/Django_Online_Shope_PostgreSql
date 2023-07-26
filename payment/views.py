@@ -27,7 +27,7 @@ def payment_process(request):
         'merchant_id': settings.ZARINAPAL_MERCHANT_ID,
         'amount': rial__total_price,
         'description': f'#{order.id}: {order.user.first_name} {order.user.last_name}',
-        'callback_url': reverse('payment:payment_callback'),
+        'callback_url': request.build_absolute_uri(reverse('payment:payment_callback')),
     }
 
     # res = requests.post(url=zarinpal_request_url, data=dumps(request_data), headers=requests_header)
@@ -70,19 +70,27 @@ def payment_callback(request):
             headers=requests_header,
         )
 
-    if 'data' in res.json() and ('errors' not in res.json()['data'] or len(res.json()['data']['errors']) == 0):
-        data = res.json()['data']
-        payment_code = data['code']
+        if 'data' in res.json() and ('errors' not in res.json()['data'] or len(res.json()['data']['errors']) == 0):
+            data = res.json()['data']
+            payment_code = data['code']
 
-        if payment_code == 100:
-            order.is_paid = True
-            order.zarinpal_ref_id = data['ref_id']
-            order.zarinpal_data = data
-            order.save()
-            return HttpResponse('your Transaction was successful')
-        elif payment_code == 101:
-            return HttpResponse('This Transaction has already been registered by you')
+            if payment_code == 100:
+                order.is_paid = True
+                order.zarinpal_ref_id = data['ref_id']
+                order.zarinpal_data = data
+                order.save()
+                return HttpResponse('your Transaction was successful')
+            elif payment_code == 101:
+                return HttpResponse('This Transaction has already been registered by you')
+            else:
+                error_code = res.json()['errors']['code']
+                error_message = res.json()['errors']['message']
+                return HttpResponse(
+                    f'Transaction failed !!! \t error code: {error_code} \t error message: {error_message}')
         else:
             error_code = res.json()['errors']['code']
             error_message = res.json()['errors']['message']
-            return HttpResponse(f'Transaction failed \t error code: {error_code} \t error message: {error_message}')
+            return HttpResponse(
+                f'Transaction failed !!! \t error code: {error_code} \t error message: {error_message}')
+    else:
+        return HttpResponse(f'Transaction failed !!!')
