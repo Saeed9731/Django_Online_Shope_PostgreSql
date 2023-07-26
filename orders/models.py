@@ -19,6 +19,9 @@ class Order(models.Model):
     Email = models.EmailField(_('Email'), max_length=700, blank=True)
 
     zarinpal_authority = models.CharField(max_length=255, blank=True)
+    zarinpal_ref_id = models.CharField(max_length=150, blank=True)
+    zarinpal_data = models.TextField(blank=True)
+
 
     datetime_create = models.DateTimeField(_('Date time created'), auto_now=True)
     datetime_modified = models.DateTimeField(_('Date time modified'), auto_now=True)
